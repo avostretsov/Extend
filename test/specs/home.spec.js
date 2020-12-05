@@ -3,9 +3,10 @@ const homePage = new HomePage()
 const helper = require('../helpers/helper')
 
 describe('Wikipedia home page', () => {
-  
-  it('should redirect from en.wikipedia.org to https://en.wikipedia.org/wiki/Main_Page', () => {
+  beforeAll(() => {
     browser.url('https://en.wikipedia.org')
+  })
+  it('should redirect from en.wikipedia.org to https://en.wikipedia.org/wiki/Main_Page', () => {
     helper.verifyUrlToBe('https://en.wikipedia.org/wiki/Main_Page')
   })
   it('should allow the user to search and display results', () => {
