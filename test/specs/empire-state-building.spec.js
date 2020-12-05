@@ -7,12 +7,14 @@ describe('Wikipedia Empire State Building page', () => {
   })
 
   it('should have the Chrysler Building as Preceded by link', () => {
-    // TBD
+    //TBD
   })
   it('should have the World Trade Center (North tower) as Surpassed by link', () => {
     // TBD
   })
   it('should have Magnify icon in the caption below each photo thumbnail', () => {
-    // TBD
+    const thumbnailCaptionsCount = empireStatePage.thumbnailCaptions.length
+    const captionsMagnifyIconsCount = empireStatePage.captionsMagnifyIcons.length
+    expect(thumbnailCaptionsCount).toEqual(captionsMagnifyIconsCount)
   })
 })
