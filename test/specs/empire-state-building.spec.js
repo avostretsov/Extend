@@ -1,5 +1,5 @@
 import { EmpireStateBuildingPage } from '../pageobjects/empire-state.page'
-const empireStatePage = new EmpireStateBuildingPage()
+const page = new EmpireStateBuildingPage()
 
 describe('Wikipedia Empire State Building page', () => {
   beforeAll(() => {
@@ -13,8 +13,8 @@ describe('Wikipedia Empire State Building page', () => {
     // TBD
   })
   it('should have Magnify icon in the caption below each photo thumbnail', () => {
-    const thumbnailCaptionsCount = empireStatePage.thumbnailCaptions.length
-    const captionsMagnifyIconsCount = empireStatePage.captionsMagnifyIcons.length
+    const thumbnailCaptionsCount = page.thumbnailCaptions.length
+    const captionsMagnifyIconsCount = page.captionsMagnifyIcons.length
     expect(thumbnailCaptionsCount).toEqual(captionsMagnifyIconsCount)
   })
 })

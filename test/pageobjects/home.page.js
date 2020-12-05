@@ -5,8 +5,6 @@ class HomePage extends Page {
   get searchInput () { return $('#searchInput') }
   get searchInputButton () { return $('#searchButton') }
   get searchSuggestionsResult () { return $('.suggestions-result') }
-  get sortByYearBtn () { return $('.headerSort=Year') }
-  get empireStateBuildingLinks () { return $$('=Empire State Building') }
 
   // Methods go here
   setSearchText (text) {
@@ -20,14 +18,7 @@ class HomePage extends Page {
   searchSuggestionsResultSelect () {
     this.searchSuggestionsResult.click()
   }
-
-  sortByYear () {
-    this.sortByYearBtn.click()
-  }
-
-  goToEmpireStateBuildingPage () {
-    this.empireStateBuildingLinks[0].click()
-  }
+  
 }
 
 export { HomePage }
